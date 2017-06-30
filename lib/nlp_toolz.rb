@@ -10,7 +10,6 @@ require "rjb"
 require "awesome_print"
 require "multi_json"
 # for downloading models and jars
-require "schiphol"
 require "zip/zip"
 
 # internal requirements

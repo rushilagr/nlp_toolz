@@ -67,14 +67,14 @@ command :init do |c|
         loaded_file = link.split('/').last.sub('?dl=0','')
         $stdout.print "download: ".green
         $stdout.puts "#{loaded_file}".blue
-
-        Schiphol.download(
-          link,
-          # Default values
-          :download_folder => "#{gem_home}",
-          :show_progress => true,
-          :max_tries => 3
-        )
+        system( "wget -P #{gem_home} #{link}")
+        # Schiphol.download(
+        #   link,
+        #   # Default values
+        #   :download_folder => "#{gem_home}",
+        #   :show_progress => true,
+        #   :max_tries => 3
+        # )
         $stdout.puts "extracting …".green
         unzip_file(File.join(gem_home,loaded_file),gem_home)
         FileUtils.rm(File.join(gem_home,loaded_file))

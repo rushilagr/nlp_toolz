@@ -5,7 +5,8 @@ module NlpToolz
   
   CLASS_PATH = Dir.glob(File.join(JARS,'*.jar')).join(':')
   
-  Rjb::load(CLASS_PATH,['-X+C','-Xmx4096m','-Djava.awt.headless=true'])
+  Rjb::load(CLASS_PATH, ['-Xmx2000m'])
+  # Rjb::load(CLASS_PATH,['-X+C','-Xmx2000m','-Djava.awt.headless=true'])
   # Rjb::load(CLASS_PATH,['-Xmx4096m','-XX:+UseParallelGC','-XX:+UseParallelOldGC','-Djava.awt.headless=true'])
   # Rjb::load(CLASS_PATH,['-Xmx4096m','-XX:+UseConcMarkSweepGC','-Djava.awt.headless=true'])
   # Rjb::load(CLASS_PATH,['-Xmx4096m','-XX:+UseSerialGC','-Djava.awt.headless=true'])
